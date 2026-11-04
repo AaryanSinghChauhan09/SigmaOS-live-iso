@@ -1,0 +1,8 @@
+[component]
+name = "SigmaOS-live-iso"
+version = "0.1.0"
+maturity = "alpha"
+tier = 4
+owner = "SigmaOS Team"
+purpose = "Bootable ISO image builder and QEMU smoke test runner"
+dependencies = ["SigmaOS-installer"]
