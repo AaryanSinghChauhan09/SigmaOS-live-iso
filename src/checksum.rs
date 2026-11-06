@@ -38,7 +38,7 @@ impl Checksum {
             acc[i] = acc[i].wrapping_mul(0xff51_afd7_ed55_8ccd);
             acc[i] ^= acc[i] >> 33;
         }
-        acc.iter().map(|v| format!("{:08x}", v)).collect()
+        acc.iter().map(|v| format!("{:08x}", ((v >> 32) ^ v) as u32)).collect()
     }
 
     /// Verifies `data` against an `expected` checksum string.

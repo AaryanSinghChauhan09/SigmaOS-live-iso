@@ -27,3 +27,5 @@ impl Component for LiveIsoComponent {
         else { Err(error::ComponentError::Service("live-iso not running".to_string())) }
     }
 }
+pub mod manifest;
+pub mod checksum;
